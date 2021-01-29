@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mon_hopital_digital/widgets/navigation.dart';
+import 'package:mon_hopital_digital/widgets/patient/patientPage.dart';
 
 class Connexion extends StatefulWidget {
 
@@ -77,6 +79,7 @@ class _ConnexionState extends State<Connexion> {
                               if(form.validate()){
                                 //form.save();
                               }
+                              versNouvellePage(PatientPage(), context);
                             },
                           ),
                         )

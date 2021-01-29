@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'connexion/connexion_page.dart';
+import 'package:mon_hopital_digital/widgets/patient/patientPage.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 
