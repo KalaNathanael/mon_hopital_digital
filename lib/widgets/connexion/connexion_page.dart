@@ -9,32 +9,30 @@ class Connexion extends StatefulWidget {
 }
 
 class _ConnexionState extends State<Connexion> {
+  final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
-    final _formKey = GlobalKey<FormState>();
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
-        resizeToAvoidBottomInset: false,
-        body: Center(
+      body: SingleChildScrollView(
+        child: Center(
           child: Column(
             children: [
               Container(
                 height: screenHeight / 5.0,
               ),
-              Card(
-                elevation: 0.0,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30.0),
-                ),
-                margin: EdgeInsets.only(bottom: 20.0),
-                child:  Container(
-                  width: screenWidth * 0.5,
-                  height: screenWidth * 0.5,
+              Container(
+                width: screenWidth * 0.5,
+                height: screenWidth * 0.5,
+                child: Card(
                   color: Colors.grey[200],
-
+                  elevation: 0.0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(100.0),
+                  ),
                   child: Image.asset('assets/logo-connexion.png', fit: BoxFit.cover),
                 ),
               ),
@@ -48,6 +46,7 @@ class _ConnexionState extends State<Connexion> {
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         TextFormField(
+
                           decoration: InputDecoration(
                             labelText: "Nom d'utilisateur",
                           ),
@@ -91,6 +90,7 @@ class _ConnexionState extends State<Connexion> {
             ],
           ),
         ),
+      ),
     );
   }
 }
