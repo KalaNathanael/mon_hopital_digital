@@ -7,16 +7,16 @@ abstract class Personne {
   String date_naissance;
   String password;
   String role;
+  String contact;
 
-  Personne({this.noms, this.prenoms, this.login, this.sexe, this.date_naissance, this.password, this.role});
+  Personne({this.noms, this.prenoms, this.login, this.sexe, this.date_naissance, this.password, this.role, this.contact});
 
   Personne.empty(){
     noms = "";
     prenoms = "";
-    login = "";
     sexe = "";
     date_naissance = "";
-    password = "";
     role = "";
+    contact = "";
   }
 }

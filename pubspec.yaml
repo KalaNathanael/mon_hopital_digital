@@ -22,6 +22,7 @@ environment:
 
 dependencies:
   hexcolor: ^1.0.6
+  syncfusion_flutter_calendar: ^18.4.41
   flutter:
     sdk: flutter
 

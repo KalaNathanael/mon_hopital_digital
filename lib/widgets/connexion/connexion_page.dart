@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mon_hopital_digital/widgets/medecin/medecinPage.dart';
 import 'package:mon_hopital_digital/widgets/navigation.dart';
 import 'package:mon_hopital_digital/widgets/patient/patientPage.dart';
 
@@ -46,7 +47,6 @@ class _ConnexionState extends State<Connexion> {
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         TextFormField(
-
                           decoration: InputDecoration(
                             labelText: "Nom d'utilisateur",
                           ),
@@ -65,7 +65,6 @@ class _ConnexionState extends State<Connexion> {
                               return "Veuillez rentrer un mot de passe";
                             }
                           },
-
                         ),
                         Container(
                           margin: EdgeInsets.fromLTRB(15.0, 28.0, 15.0, 0),
@@ -78,7 +77,7 @@ class _ConnexionState extends State<Connexion> {
                               if(form.validate()){
                                 //form.save();
                               }
-                              versNouvellePage(PatientPage(), context);
+                              versNouvellePage(MedecinPage(), context);
                             },
                           ),
                         )
